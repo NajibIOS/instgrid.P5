@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GridView" customModule="instgrid_P5" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomLeftImageView" destination="tEv-sP-Fox" id="r6V-ps-C52"/>
+                <outlet property="bottomLeftView" destination="xXB-EV-f2H" id="NgN-5x-bM1"/>
+                <outlet property="bottomRightImageView" destination="UKR-Gb-ayC" id="Rg4-1U-T7K"/>
+                <outlet property="bottomRightView" destination="JoJ-MI-xr9" id="eRS-Pf-Mu5"/>
+                <outlet property="bottonUpleft" destination="Rc7-IG-HUD" id="rQi-aA-BaG"/>
+                <outlet property="buttonDownLeft" destination="bit-Bm-gVV" id="zZc-5L-sYW"/>
+                <outlet property="buttonDownRight" destination="Mi7-9l-byZ" id="6DN-z9-RAt"/>
+                <outlet property="buttonUpRight" destination="THc-my-Gx0" id="u9R-TB-bWq"/>
+                <outlet property="topLeftImageView" destination="GpY-j6-Knz" id="Sqw-QW-9Ri"/>
+                <outlet property="topLeftView" destination="xdt-7u-5r1" id="TbD-OV-LTQ"/>
+                <outlet property="topRightImageView" destination="XbT-vm-L38" id="U7U-xI-EIM"/>
+                <outlet property="topRightView" destination="e0F-nS-6fi" id="I2z-zV-BU7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="lYE-2S-Bym">
+                    <rect key="frame" x="15" y="15" width="270" height="270"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="vlN-b4-jN4">
+                            <rect key="frame" x="0.0" y="0.0" width="270" height="127.5"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xdt-7u-5r1">
+                                    <rect key="frame" x="0.0" y="0.0" width="127.5" height="127.5"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GpY-j6-Knz">
+                                            <rect key="frame" x="0.0" y="0.0" width="127" height="127.5"/>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rc7-IG-HUD">
+                                            <rect key="frame" x="39" y="39" width="48" height="48"/>
+                                            <state key="normal" backgroundImage="PlusButton "/>
+                                            <connections>
+                                                <action selector="addButtomAction:" destination="-1" eventType="touchUpInside" id="pNO-XL-Ohm"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="GpY-j6-Knz" firstAttribute="top" secondItem="xdt-7u-5r1" secondAttribute="top" id="2Oq-Az-ej8"/>
+                                        <constraint firstAttribute="trailing" secondItem="GpY-j6-Knz" secondAttribute="trailing" id="Bjh-4f-RSd"/>
+                                        <constraint firstAttribute="bottom" secondItem="GpY-j6-Knz" secondAttribute="bottom" id="Xgh-EP-com"/>
+                                        <constraint firstItem="Rc7-IG-HUD" firstAttribute="centerX" secondItem="xdt-7u-5r1" secondAttribute="centerX" id="cqd-MZ-zUd"/>
+                                        <constraint firstItem="GpY-j6-Knz" firstAttribute="leading" secondItem="xdt-7u-5r1" secondAttribute="leading" id="jjk-30-mZl"/>
+                                        <constraint firstItem="Rc7-IG-HUD" firstAttribute="centerY" secondItem="xdt-7u-5r1" secondAttribute="centerY" id="jsN-WP-a7H"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e0F-nS-6fi">
+                                    <rect key="frame" x="142.5" y="0.0" width="127.5" height="127.5"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XbT-vm-L38">
+                                            <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
+                                        </imageView>
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THc-my-Gx0">
+                                            <rect key="frame" x="40" y="39" width="48" height="48"/>
+                                            <state key="normal" backgroundImage="PlusButton "/>
+                                            <connections>
+                                                <action selector="addButtomAction:" destination="-1" eventType="touchUpInside" id="6fO-DX-aQ9"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="XbT-vm-L38" firstAttribute="top" secondItem="e0F-nS-6fi" secondAttribute="top" id="0KE-Nx-9ky"/>
+                                        <constraint firstItem="THc-my-Gx0" firstAttribute="centerY" secondItem="e0F-nS-6fi" secondAttribute="centerY" id="Eqo-l6-4ng"/>
+                                        <constraint firstAttribute="bottom" secondItem="XbT-vm-L38" secondAttribute="bottom" id="IZ9-wR-9ui"/>
+                                        <constraint firstItem="XbT-vm-L38" firstAttribute="leading" secondItem="e0F-nS-6fi" secondAttribute="leading" id="drb-cf-BKy"/>
+                                        <constraint firstItem="THc-my-Gx0" firstAttribute="centerX" secondItem="e0F-nS-6fi" secondAttribute="centerX" id="ffn-ie-iSj"/>
+                                        <constraint firstAttribute="trailing" secondItem="XbT-vm-L38" secondAttribute="trailing" id="htc-aB-xV6"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="cVe-PO-28v">
+                            <rect key="frame" x="0.0" y="142.5" width="270" height="127.5"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xXB-EV-f2H">
+                                    <rect key="frame" x="0.0" y="0.0" width="127.5" height="127.5"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tEv-sP-Fox">
+                                            <rect key="frame" x="0.0" y="0.0" width="127" height="128"/>
+                                        </imageView>
+                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bit-Bm-gVV">
+                                            <rect key="frame" x="39" y="40" width="48" height="48"/>
+                                            <state key="normal" backgroundImage="PlusButton "/>
+                                            <connections>
+                                                <action selector="addButtomAction:" destination="-1" eventType="touchUpInside" id="9YX-gz-Xtn"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="tEv-sP-Fox" secondAttribute="trailing" id="4dc-LH-oLF"/>
+                                        <constraint firstItem="tEv-sP-Fox" firstAttribute="leading" secondItem="xXB-EV-f2H" secondAttribute="leading" id="FPw-yi-wOR"/>
+                                        <constraint firstItem="bit-Bm-gVV" firstAttribute="centerY" secondItem="xXB-EV-f2H" secondAttribute="centerY" id="cT3-nc-Lcx"/>
+                                        <constraint firstItem="tEv-sP-Fox" firstAttribute="top" secondItem="xXB-EV-f2H" secondAttribute="top" id="n72-gZ-eoS"/>
+                                        <constraint firstAttribute="bottom" secondItem="tEv-sP-Fox" secondAttribute="bottom" id="tqv-Qc-wmE"/>
+                                        <constraint firstItem="bit-Bm-gVV" firstAttribute="centerX" secondItem="xXB-EV-f2H" secondAttribute="centerX" id="vio-rB-3Fa"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JoJ-MI-xr9">
+                                    <rect key="frame" x="142.5" y="0.0" width="127.5" height="127.5"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UKR-Gb-ayC">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="127"/>
+                                        </imageView>
+                                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mi7-9l-byZ">
+                                            <rect key="frame" x="40" y="40" width="48" height="48"/>
+                                            <state key="normal" backgroundImage="PlusButton "/>
+                                            <connections>
+                                                <action selector="addButtomAction:" destination="-1" eventType="touchUpInside" id="9Dm-Lz-IZ4"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="UKR-Gb-ayC" secondAttribute="trailing" id="8CH-O6-YVd"/>
+                                        <constraint firstAttribute="bottom" secondItem="UKR-Gb-ayC" secondAttribute="bottom" id="9Kr-qg-ZWH"/>
+                                        <constraint firstItem="UKR-Gb-ayC" firstAttribute="leading" secondItem="JoJ-MI-xr9" secondAttribute="leading" id="PIy-42-tNo"/>
+                                        <constraint firstItem="Mi7-9l-byZ" firstAttribute="centerY" secondItem="JoJ-MI-xr9" secondAttribute="centerY" id="UVB-UB-K74"/>
+                                        <constraint firstItem="Mi7-9l-byZ" firstAttribute="centerX" secondItem="JoJ-MI-xr9" secondAttribute="centerX" id="vcn-qN-Muu"/>
+                                        <constraint firstItem="UKR-Gb-ayC" firstAttribute="top" secondItem="JoJ-MI-xr9" secondAttribute="top" id="xxC-II-wtU"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="lYE-2S-Bym" secondAttribute="bottom" constant="15" id="ili-d4-Cuu"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lYE-2S-Bym" secondAttribute="trailing" constant="15" id="nzk-4p-THe"/>
+                <constraint firstItem="lYE-2S-Bym" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="oTQ-w4-E6T"/>
+                <constraint firstItem="lYE-2S-Bym" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="xGi-nV-0BC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="PlusButton " width="48" height="48"/>
+    </resources>
+</document>
