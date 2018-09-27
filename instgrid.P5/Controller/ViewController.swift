@@ -50,4 +50,23 @@ class ViewController: UIViewController {
             break
         }
     }
+    
+    // Pour aller cher la photo depuis sa source
+    private func startPickerControllerLibrary() {
+        imagePicker.sourceType = .photoLibrary
+        // Afficher le controlleur
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    private func startPickerControllerCamera() {
+        imagePicker.sourceType = .camera
+        // Afficher le controlleur
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    // To Pick photo from camera
+    @objc private func showImageSourceMenu(gesture: UITapGestureRecognizer) {
+        gridView.currentTag = gesture.view?.tag
+        displayImageSourceMenu()
+    }
 }
