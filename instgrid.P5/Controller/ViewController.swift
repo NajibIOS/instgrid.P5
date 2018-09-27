@@ -69,4 +69,45 @@ class ViewController: UIViewController {
         gridView.currentTag = gesture.view?.tag
         displayImageSourceMenu()
     }
+    
+    //MARK: - Methodes To Manage The SwipeUP
+    
+    // The Swipe Format (Portrait - Landscape)
+    @objc private func setUpSwipeDiretion() {
+        if UIDevice.current.orientation.isLandscape {
+            swipeGestureRecognizer?.direction = .left
+        } else if UIDevice.current.orientation.isPortrait{
+            swipeGestureRecognizer?.direction = .up
+        }
+    }
+    
+    // The Methode to configurate the SwipeGesture
+    private func swipeConfiguration() {
+        swipeGestureRecognizer = UISwipeGestureRecognizer (target: self, action: #selector(swipeAndShare))
+        gridView.addGestureRecognizer(swipeGestureRecognizer!)
+    }
+    
+    @objc private func swipeAndShare() {
+        if swipeGestureRecognizer?.direction == .up {
+            swipeUp()
+        }else {
+            swipeLeft()
+        }
+    }
+    
+    private func swipeUp() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.gridView.transform = CGAffineTransform(translationX: 0, y: -self.view.frame.height)
+        }, completion: { _ in
+            self.shareGridView()
+        })
+    }
+    
+    private func swipeLeft() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.gridView.transform = CGAffineTransform(translationX: -self.view.frame.width, y: 0)
+        }, completion: { _ in
+            self.shareGridView()
+        })
+    }
 }
