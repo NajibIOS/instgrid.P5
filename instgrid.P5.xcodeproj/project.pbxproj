@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9E2D7662215CF16000EBDC44 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2D7661215CF16000EBDC44 /* UIView.swift */; };
+		9E2D7664215CF8A100EBDC44 /* UIImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2D7663215CF8A100EBDC44 /* UIImagePickerController.swift */; };
 		9EC8ED81211345EB008EE5A2 /* GridView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EC8ED80211345EB008EE5A2 /* GridView.xib */; };
 		9EC8ED8321134606008EE5A2 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC8ED8221134606008EE5A2 /* GridView.swift */; };
 		9EE292F221095486001F34B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE292F121095486001F34B1 /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		9E2D7661215CF16000EBDC44 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		9E2D7663215CF8A100EBDC44 /* UIImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImagePickerController.swift; sourceTree = "<group>"; };
 		9EC8ED80211345EB008EE5A2 /* GridView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridView.xib; sourceTree = "<group>"; };
 		9EC8ED8221134606008EE5A2 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		9EE292EE21095486001F34B1 /* instgrid.P5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instgrid.P5.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				9E2D7661215CF16000EBDC44 /* UIView.swift */,
+				9E2D7663215CF8A100EBDC44 /* UIImagePickerController.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				9EC8ED8321134606008EE5A2 /* GridView.swift in Sources */,
 				9EE292F221095486001F34B1 /* AppDelegate.swift in Sources */,
 				9EF769D1211C6C2100E9D598 /* Grid.swift in Sources */,
+				9E2D7664215CF8A100EBDC44 /* UIImagePickerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
