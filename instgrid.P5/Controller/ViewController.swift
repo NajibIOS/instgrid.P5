@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     //MARK: - Properties
     
     @IBOutlet weak var pattern1Button: UIButton!
@@ -22,8 +23,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        setupBehaviors()
+        swipeConfiguration()
     }
     
     // Setup Notification Observer & Delegate
@@ -51,7 +52,7 @@ class ViewController: UIViewController {
         }
     }
     
-    // Pour aller cher la photo depuis sa source
+    // To Pick The Images From  Their sources
     private func startPickerControllerLibrary() {
         imagePicker.sourceType = .photoLibrary
         // Afficher le controlleur
@@ -66,6 +67,31 @@ class ViewController: UIViewController {
     
     // To Pick photo from camera
     @objc private func showImageSourceMenu(gesture: UITapGestureRecognizer) {
+        gridView.currentTag = gesture.view?.tag
+        displayImageSourceMenu()
+    }
+    
+    @objc private func displayImageSourceMenu() {
+        // Create the alert
+        let alertController = UIAlertController(title: "Take a photo", message: "", preferredStyle: .actionSheet)
+        // Create The Actions
+        let cameraAction = UIAlertAction(title: "Camera", style: .default) { (action) in
+            self.startPickerControllerCamera()
+        }
+        let libraryAction = UIAlertAction(title: "Photo Library", style: .default) { (action) in
+            self.startPickerControllerLibrary()
+        }
+        // Cancel Button
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        // After Creating these action, we add it to our alert
+        alertController.addAction(cameraAction)
+        alertController.addAction(libraryAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    // For Update The Tag & Restart The PickerControlleur
+    @objc private func startPickerControllerWithTag(gesture: UITapGestureRecognizer){
         gridView.currentTag = gesture.view?.tag
         displayImageSourceMenu()
     }
