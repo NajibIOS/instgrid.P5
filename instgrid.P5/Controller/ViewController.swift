@@ -110,4 +110,21 @@ class ViewController: UIViewController {
             self.shareGridView()
         })
     }
+    
+    // Shared The Grid VIew
+    private func shareGridView() {
+        guard let image = gridView.convertToImage() else { return }
+        let activityController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        present(activityController,animated: true, completion: nil)
+        activityController.completionWithItemsHandler = { activity, completed, items, error in
+            self.animationBack()
+        }
+    }
+    
+    // Manage The Return Of The Grid
+    private func animationBack() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.gridView.transform = .identity
+        })
+    }
 }
