@@ -27,6 +27,10 @@ class ViewController: UIViewController {
         swipeConfiguration()
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     // Setup Notification Observer & Delegate
     private func setupBehaviors()  {
         gridView.grid = .pattern2
@@ -153,4 +157,46 @@ class ViewController: UIViewController {
             self.gridView.transform = .identity
         })
     }
+}
+
+//MARK: UIImagePickerControllerDelegate
+
+extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    // If user want to cancel to choose a photo
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        // Pour faire dissparaitre le controleur qui va nous de choisir une photo
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+// Local variable inserted by Swift 4.2 migrator.
+let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
+
+        // Afin de s'assurer que le fichier choisit est une photo
+        guard let selectedImage = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.originalImage)] as? UIImage else {
+            return
+        }
+        guard let tag = gridView.currentTag else { return }
+        let imageViews = [gridView.topLeftImageView, gridView.topRightImageView, gridView.bottomLeftImageView, gridView.bottomRightImageView ]
+        imageViews[tag]?.image = selectedImage
+        // Pour cacher le boutton '+'
+        let plusAddButton = [gridView.bottonUpleft, gridView.buttonUpRight, gridView.buttonDownLeft, gridView.buttonDownRight]
+        imageViews[tag]?.image = selectedImage
+        plusAddButton[tag]?.isHidden = true
+        // Tap Gesture apres apres que le bouton "+" ai disparu.
+        let tapGestureRecongnizer = UITapGestureRecognizer(target: self, action: #selector(showImageSourceMenu(gesture: )))
+        gridView.addGestureRecognizer(tapGestureRecongnizer)
+        dismiss(animated: true, completion: nil)
+    }
+}
+
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
+	return input.rawValue
 }
