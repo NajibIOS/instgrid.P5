@@ -164,24 +164,24 @@ class ViewController: UIViewController {
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     // If user want to cancel to choose a photo
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        // Pour faire dissparaitre le controleur qui va nous de choisir une photo
+        // To Hide The controler
         dismiss(animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
 
-        // Afin de s'assurer que le fichier choisit est une photo
+        // To Be Sure That The Choosen File Is The Photo
         guard let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
             return
         }
         guard let tag = gridView.currentTag else { return }
         let imageViews = [gridView.topLeftImageView, gridView.topRightImageView, gridView.bottomLeftImageView, gridView.bottomRightImageView ]
         imageViews[tag]?.image = selectedImage
-        // Pour cacher le boutton '+'
+        // For Hidding The '+' Button
         let plusAddButton = [gridView.bottonUpleft, gridView.buttonUpRight, gridView.buttonDownLeft, gridView.buttonDownRight]
         imageViews[tag]?.image = selectedImage
         plusAddButton[tag]?.isHidden = true
-        // Tap Gesture apres apres que le bouton "+" ai disparu.
+        // The Tap Gesture After Hidding The "+" botton.
         let tapGestureRecongnizer = UITapGestureRecognizer(target: self, action: #selector(showImageSourceMenu(gesture: )))
         gridView.addGestureRecognizer(tapGestureRecongnizer)
         dismiss(animated: true, completion: nil)

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,11 +20,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="instgrid_P5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aza-77-X87" customClass="GridView" customModule="instgrid_P5" customModuleProvider="target">
-                                <rect key="frame" x="30" y="176" width="315" height="315"/>
+                                <rect key="frame" x="30" y="191" width="354" height="354"/>
                                 <color key="backgroundColor" red="0.031372549019607843" green="0.47843137254901957" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -35,7 +35,7 @@
                                 </connections>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9IC-GV-czC">
-                                <rect key="frame" x="57.5" y="511" width="260" height="80"/>
+                                <rect key="frame" x="77" y="565" width="260" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMm-Fz-k0p">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -65,7 +65,7 @@
                                 <variation key="heightClass=compact" axis="vertical"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0d-0F-CDj">
-                                <rect key="frame" x="138" y="20" width="99" height="33"/>
+                                <rect key="frame" x="157.66666666666666" y="20" width="98.666666666666657" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="Bvo-Pf-fTk"/>
                                 </constraints>
@@ -74,14 +74,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rJT-kh-EOZ">
-                                <rect key="frame" x="110.5" y="113" width="154" height="43"/>
+                                <rect key="frame" x="130" y="128.33333333333334" width="154" height="42.666666666666657"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SwypeUpPortrait" translatesAutoresizingMaskIntoConstraints="NO" id="9fO-Cc-sAe">
-                                        <rect key="frame" x="69.5" y="0.0" width="15" height="10"/>
+                                        <rect key="frame" x="69.666666666666657" y="0.0" width="15" height="10"/>
                                         <variation key="heightClass=compact" image="SwipeUpPaysage"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AM9-sQ-boV">
-                                        <rect key="frame" x="0.0" y="15" width="154" height="28"/>
+                                        <rect key="frame" x="0.0" y="15.000000000000002" width="154" height="27.666666666666671"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Swipe up to share">
                                                 <attributes>
